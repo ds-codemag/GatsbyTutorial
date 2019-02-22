@@ -1,10 +1,7 @@
-.section {
-    padding: 4rem 0;
-}
+// -----------------------------------------------------------------------------
+// Layout base styles
+// -----------------------------------------------------------------------------
 
-.container {
-    width: 100%;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 0 15px;
+.section {
+    @include set-in-rem(padding, 60 0);
 }

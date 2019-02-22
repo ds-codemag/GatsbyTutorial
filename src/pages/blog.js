@@ -5,11 +5,7 @@ export default () => (
     <Layout>
         <section className="section">
             <div className="container">
-                <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
-                <p>
-                    What do I like to do? Lots of course but definitely enjoy building
-                    websites.
-                </p>
+                <h1>Blog</h1>
             </div>
         </section>
     </Layout>

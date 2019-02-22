@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Header from './header/header'
 
-import '../styles/stylesheet.css';
+import '../styles/stylesheet.scss';
 
 const Layout = (props) => (
     <div>

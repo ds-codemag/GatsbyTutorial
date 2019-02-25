@@ -21,7 +21,7 @@ export default ({data}) => (
 
                         <div
                             css={css`
-                                margin-bottom: ${rhythm(1)};
+                                margin-bottom: ${rhythm(0.5)};
                             `}
                         >
                             <span
@@ -46,7 +46,12 @@ export default ({data}) => (
 
 export const query = graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark (
+        sort: {
+          fields: [frontmatter___date]
+          order: DESC
+        }
+      ) {
         edges {
           node {
             id

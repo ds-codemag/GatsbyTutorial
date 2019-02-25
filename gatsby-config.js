@@ -1,8 +1,17 @@
 module.exports = {
     siteMetadata: {
-        title: "My Homepage"
+        title: "Gatsby.js tutorial",
+        description: "This is a page created with Gastby.js tutorial."
     },
     plugins: [
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src/`,
+            },
+        },
+        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-plugin-sass`,
             options: {

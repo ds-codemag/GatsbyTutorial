@@ -1,7 +1,8 @@
-import * as React from "react"
+import * as React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
-export default () => (
+export default ({data}) => (
     <Layout>
         <section className="section">
             <div className="container">
@@ -10,7 +11,20 @@ export default () => (
                     What do I like to do? Lots of course but definitely enjoy building
                     websites.
                 </p>
+                <p>
+                    {data.site.siteMetadata.description}
+                </p>
             </div>
         </section>
     </Layout>
 )
+
+export const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                description
+            }
+        }
+    }
+`;

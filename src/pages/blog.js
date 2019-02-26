@@ -55,6 +55,9 @@ export const query = graphql`
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
               title
               date(formatString: "DD MMMM YYYY", locale: "pl")

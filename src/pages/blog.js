@@ -1,7 +1,7 @@
 import * as React from "react";
 import { css } from "@emotion/core";
 import { rhythm, scale } from '../utils/typography';
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from '../components/layout';
 
 export default ({data}) => (
@@ -16,7 +16,19 @@ export default ({data}) => (
                                 margin-bottom: ${rhythm(0.25)}
                             `}
                         >
-                            {node.frontmatter.title}
+                            <Link
+                                to={node.fields.slug}
+                                css={css`
+                                    color: #000;
+                                    text-decoration: none;
+                                    transition: color .3s;
+                                    &:hover {
+                                        color: #777;
+                                    }
+                                `}
+                            >
+                                {node.frontmatter.title}
+                            </Link>
                         </h2>
 
                         <div
@@ -26,9 +38,9 @@ export default ({data}) => (
                         >
                             <span
                                 css={css`
-                                ${scale(-0.25)}
-                                font-weight: 600
-                            `}
+                                    ${scale(-0.25)}
+                                    font-weight: 600
+                                `}
                             >
                                 {node.frontmatter.date}
                             </span>
